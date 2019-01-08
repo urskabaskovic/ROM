@@ -1,0 +1,440 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15163,        430]
+NotebookOptionsPosition[     12177,        367]
+NotebookOutlinePosition[     12548,        383]
+CellTagsIndexPosition[     12505,        380]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Piramida",
+ FontColor->RGBColor[1., 0.5019607843137255, 0.5019607843137255]]], "Section",
+ CellChangeTimes->{{3.755428026735264*^9, 3.755428033236592*^9}, 
+   3.7554287599570923`*^9},ExpressionUUID->"8b3f5908-6bea-4141-9535-\
+5d7bf449409d"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Kaj je piramida?",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.7554282462507915`*^9, 3.7554282553851595`*^9}, 
+   3.7554287794800806`*^9},ExpressionUUID->"1d3c0b1e-b574-4be1-873c-\
+5e4ba96e004a"],
+
+Cell["\<\
+Piramida je geometrijsko telo omejeno z osnovno ploskvijo in pla\[SHacek]\
+\[CHacek]em. Osnovna ploskev je poljuben n - kotnik, pla\[SHacek]\[CHacek] pa \
+je sestavljen iz trikotnikov, ki povezujejo osnovno ploskev s to\[CHacek]ko, \
+ki jo imenujemo vrh piramide.
+Stranice osnovne ploskve imenujemo osnovni robovi piramide. Vse ostale robove \
+imenujeo stranski robovi.
+Vi\[SHacek]ina piramide je daljica, ki poteka od vrha do ravnine osnovne \
+ploskve in je na to ravnino pravokotna.\
+\>", "Text",
+ CellChangeTimes->{{3.755428037646737*^9, 3.755428043444289*^9}, {
+   3.7554280950256543`*^9, 3.755428202002635*^9}, 3.75542824257964*^9, 
+   3.75542879236419*^9, {3.755866471315771*^9, 
+   3.7558665664508395`*^9}},ExpressionUUID->"17fcd4e3-6301-460f-a7ca-\
+8d75bc70d42e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Poznamo tri vrste piramid:",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.755428410386608*^9, 
+  3.755428425816291*^9}},ExpressionUUID->"2b48e138-bbc3-400a-89ad-\
+30a8239fa475"],
+
+Cell[TextData[{
+ "1. po\[SHacek]evno, \[CHacek]e ima za osnovno ploskev pravilni n - kotnik \
+in je pravokotna projekcija vrha na ravnino osnovne ploskve v sredi\[SHacek]\
+\[CHacek]u tega ve\[CHacek]kotnika;\n2. ",
+ StyleBox["pokon\[CHacek]no",
+  FontColor->GrayLevel[0]],
+ ", \[CHacek]e ima vse stranske robove enako dolge;\n3.  ",
+ StyleBox["pravilno",
+  FontColor->GrayLevel[0]],
+ ", \[CHacek]e ma za osnovno ploskev pravilni n - kotnik in je pravokotna \
+projekcija vrha na ravnino osnovne ploskve v sredi\[SHacek]\[CHacek]u tega n \
+- kotnika."
+}], "Text",
+ CellChangeTimes->{{3.7554285838136816`*^9, 3.7554286825616646`*^9}, {
+  3.755428806874519*^9, 3.7554288503922276`*^9}, {3.755866579617414*^9, 
+  3.755866587089641*^9}},ExpressionUUID->"e0f35f33-3599-420a-a69b-\
+3a70067be653"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Primera piramid",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.7558669721786346`*^9, 3.7558669751245117`*^9}, {
+  3.7558670800992393`*^9, 3.7558670874547462`*^9}, {3.755867125932331*^9, 
+  3.7558671693333807`*^9}, {3.755867202254426*^9, 
+  3.7558672110565014`*^9}},ExpressionUUID->"d3464010-64cb-4511-9372-\
+98472b50acdf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Pyramid", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "2"}], "}"}]}], "}"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7554285505646563`*^9, 3.755428550838497*^9}, {
+  3.755866220532659*^9, 
+  3.7558662227783804`*^9}},ExpressionUUID->"c2c523cb-e463-46b1-9435-\
+0a0885bf8222"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  PyramidBox[{{0, 0, 0}, {2, 0, 0}, {2, 2, 0}, {0, 2, 0}, {1, 1, 2}}],
+  ImageSize->{348.73109939296256`, 410.25680713708147`},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{-2.265332351874695, 0.3990763709561765, 2.4817347532913976`},
+  ViewVertical->{0.16634529966970896`, -0.12598128893508387`, 
+   0.9779866850402666}]], "Output",
+ CellChangeTimes->{
+  3.755866225377573*^9},ExpressionUUID->"ed435c8a-b6b6-4634-af5c-\
+bee16be03e59"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalR]", "=", 
+   RowBox[{"Pyramid", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "2", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1", ",", "2"}], "}"}]}], "}"}], "]"}]}], ";", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"EdgeForm", "[", 
+       RowBox[{"{", 
+        RowBox[{"Thick", ",", " ", "Dashed", ",", "Purple"}], "}"}], "]"}], 
+      ",", 
+      RowBox[{"FaceForm", "[", 
+       RowBox[{"{", 
+        RowBox[{"Pink", ",", 
+         RowBox[{"Opacity", "[", "0.7", "]"}]}], "}"}], "]"}], ",", 
+      "\[ScriptCapitalR]"}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7558662822014422`*^9, 3.7558663232090874`*^9}, {
+  3.755866753287921*^9, 3.755866791065251*^9}, {3.755866872878435*^9, 
+  3.755866929144603*^9}},ExpressionUUID->"37258be8-c8a2-4915-8aa6-\
+84920552824e"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {EdgeForm[{RGBColor[0.5, 0, 0.5], Thickness[Large], 
+   Dashing[{Small, Small}]}], FaceForm[{RGBColor[1, 0.5, 0.5], Opacity[0.7]}],
+    PyramidBox[{{0, 0, 0}, {2, 0, 0}, {2, 2, 0}, {0, 2, 0}, {1, 1, 2}}]},
+  Boxed->False,
+  ImageSize->{369.9313286610254, 368.01454771197956`},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{1.3836477662184576`, -2.6526383286671673`, 1.580831666030425},
+  ViewVertical->{0.17572070116479252`, -0.07745289201305686, 
+   0.9813884474054947}]], "Output",
+ CellChangeTimes->{{3.7558663060969563`*^9, 3.7558663248377943`*^9}, {
+  3.755866759529067*^9, 3.755866791837222*^9}, {3.755866876109354*^9, 
+  3.755866931082019*^9}},ExpressionUUID->"b62866f4-bd89-49e3-a1c6-\
+c349e6a926a7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Prostornina in volumen",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.7558673582203865`*^9, 3.7558673584258184`*^9}, {
+  3.755867389385291*^9, 
+  3.7558674169999857`*^9}},ExpressionUUID->"7197ccac-3cc6-4f0c-8f33-\
+8fbef2c1a441"],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{"S", " ", "+", " ", "pl"}]}],
+  FontColor->GrayLevel[0]], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"V", " ", "=", " ", 
+   RowBox[{
+    FractionBox["1", "3"], "*", " ", "S", "*", "v"}]}],
+  FontColor->GrayLevel[0]]}], "Input",
+ CellChangeTimes->{{3.7558674206718874`*^9, 3.755867421081574*^9}, {
+   3.755867568969119*^9, 3.755867624829521*^9}, 
+   3.7558676601523795`*^9},ExpressionUUID->"16b6364c-b326-4597-b2ec-\
+47c3a75116bf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["3 - strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.755868246016651*^9, 
+  3.755868281604355*^9}},ExpressionUUID->"57ab82f8-33d1-43dd-a4d7-\
+c87aa345d76d"],
+
+Cell[BoxData[{
+ RowBox[{"P", " ", "=", " ", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"a", 
+     RowBox[{"(", 
+      RowBox[{"va", " ", "+", " ", "v1"}], ")"}]}], "+", 
+    RowBox[{"b", "*", "v2"}], "+", 
+    RowBox[{"c", "*", "v3"}]}], "2"]}], "\[IndentingNewLine]", 
+ RowBox[{"V", " ", "=", " ", 
+  FractionBox[
+   RowBox[{"a", " ", "*", " ", "va", " ", "*", "v"}], "6"]}]}], "Input",
+ CellChangeTimes->{{3.755868661890916*^9, 3.755868668556119*^9}, {
+  3.7558687251820817`*^9, 
+  3.755868823584237*^9}},ExpressionUUID->"15cacb62-8724-4ec2-bc8e-\
+be901a6f2af8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Pravilna 3 - strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.755868288709029*^9, 
+  3.7558683137920113`*^9}},ExpressionUUID->"f4eba9ec-b3c3-44c0-968c-\
+7049d1fe1c6f"],
+
+Cell[BoxData[{
+ RowBox[{"P", " ", "=", " ", 
+  RowBox[{
+   FractionBox["a", "2"], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"a", 
+       SqrtBox["3"]}], "2"], "+", 
+     RowBox[{"3", "*", "vs"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"V", "=", " ", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["a", "2"], "*", "v", "*", 
+    SqrtBox["3"]}], "12"]}]}], "Input",
+ CellChangeTimes->{{3.7558688350396*^9, 
+  3.755868948442011*^9}},ExpressionUUID->"4f2b4656-5468-4a8a-9e5c-\
+78cedb604dba"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Enakorobna 3 - strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.7558684587207456`*^9, 3.7558684967916684`*^9}, {
+  3.755868963695405*^9, 
+  3.75586896441411*^9}},ExpressionUUID->"0689d0f2-99ba-4e73-af1a-\
+070e22531f4b"],
+
+Cell[BoxData[{
+ RowBox[{"P", " ", "=", " ", 
+  RowBox[{
+   FractionBox[
+    SuperscriptBox["a", "2"], "2"], 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      SqrtBox["3"], "2"], "+", 
+     SqrtBox["2"]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"V", "=", " ", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["a", "2"], "*", "v", "*", 
+    SqrtBox["3"]}], "12"]}]}], "Input",
+ CellChangeTimes->{{3.755868966569912*^9, 
+  3.7558690046802745`*^9}},ExpressionUUID->"d8e7e046-56a1-42a8-9c97-\
+586bd153b77c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["4 - strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.7558685092469597`*^9, 3.7558685165169888`*^9}, 
+   3.7558685651667557`*^9},ExpressionUUID->"8617b837-e490-4fff-b895-\
+04b13aa91817"],
+
+Cell[BoxData[{
+ RowBox[{"P", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"a", "*", "b"}], "+", 
+   RowBox[{"a", "*", "va"}], "+", 
+   RowBox[{"b", "*", "vb"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"V", " ", "=", " ", 
+  RowBox[{
+   FractionBox["1", "3"], "*", "a", "*", "b", "*", "v"}]}]}], "Input",
+ CellChangeTimes->{{3.7558690455062475`*^9, 
+  3.7558691372023926`*^9}},ExpressionUUID->"6f9bbffe-31f6-4af0-ab33-\
+8528b8a86c19"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Pravilna 4-strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.755867953709874*^9, 3.755867988668853*^9}, {
+  3.7558685975112815`*^9, 
+  3.755868601805828*^9}},ExpressionUUID->"5fe0e920-7c80-4439-bfb0-\
+1c697d37c542"],
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"P", " ", "=", " ", 
+   RowBox[{"a", 
+    RowBox[{"(", 
+     RowBox[{"a", " ", "+", " ", 
+      RowBox[{"2", "*", "v"}]}], ")"}]}]}],
+  FontColor->GrayLevel[0]], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"V", " ", "=", " ", 
+   RowBox[{
+    FractionBox["1", "3"], "*", 
+    SuperscriptBox["a", "2"], "*", "v"}]}],
+  FontColor->GrayLevel[0]]}], "Input",
+ CellChangeTimes->{{3.7558680274727793`*^9, 3.7558680277107077`*^9}, {
+  3.755868125944963*^9, 
+  3.755868190340679*^9}},ExpressionUUID->"496b7863-87c9-4b58-b8c6-\
+8633c16ab5b8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Enakorobna 4-strana piramida",
+ FontColor->GrayLevel[0]]], "Subsubsection",
+ CellChangeTimes->{{3.755868193378029*^9, 3.7558681936285253`*^9}, {
+  3.755868527663062*^9, 3.755868548271902*^9}, {3.755868605512414*^9, 
+  3.7558686084472094`*^9}},ExpressionUUID->"f3fd1a5e-4bfa-42b9-a805-\
+984d6063c0b5"],
+
+Cell[BoxData[{
+ RowBox[{"P", " ", "=", " ", 
+  RowBox[{
+   SuperscriptBox["a", "2"], 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     SqrtBox["3"]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"V", " ", "=", " ", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["a", "3"], 
+    SqrtBox["2"]}], "6"]}]}], "Input",
+ CellChangeTimes->{{3.7558691465030975`*^9, 
+  3.7558692072947083`*^9}},ExpressionUUID->"87bf6a37-ca18-47cc-ad54-\
+d276046fa3b3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{675, 772},
+WindowMargins->{{Automatic, -4}, {Automatic, 0}},
+Magnification:>1.1 Inherited,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 264, 4, 73, "Section",ExpressionUUID->"8b3f5908-6bea-4141-9535-5d7bf449409d"],
+Cell[CellGroupData[{
+Cell[869, 30, 242, 4, 49, "Subsubsection",ExpressionUUID->"1d3c0b1e-b574-4be1-873c-5e4ba96e004a"],
+Cell[1114, 36, 781, 14, 191, "Text",ExpressionUUID->"17fcd4e3-6301-460f-a7ca-8d75bc70d42e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1932, 55, 223, 4, 49, "Subsubsection",ExpressionUUID->"2b48e138-bbc3-400a-89ad-30a8239fa475"],
+Cell[2158, 61, 788, 16, 141, "Text",ExpressionUUID->"e0f35f33-3599-420a-a69b-3a70067be653"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2983, 82, 368, 6, 49, "Subsubsection",ExpressionUUID->"d3464010-64cb-4511-9372-98472b50acdf"],
+Cell[CellGroupData[{
+Cell[3376, 92, 673, 19, 55, "Input",ExpressionUUID->"c2c523cb-e463-46b1-9435-0a0885bf8222"],
+Cell[4052, 113, 461, 10, 470, "Output",ExpressionUUID->"ed435c8a-b6b6-4634-af5c-bee16be03e59"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4550, 128, 1212, 33, 77, "Input",ExpressionUUID->"37258be8-c8a2-4915-8aa6-84920552824e"],
+Cell[5765, 163, 735, 14, 77, "Output",ExpressionUUID->"b62866f4-bd89-49e3-a1c6-c349e6a926a7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6549, 183, 274, 5, 77, "Subsubsection",ExpressionUUID->"7197ccac-3cc6-4f0c-8f33-8fbef2c1a441"],
+Cell[6826, 190, 501, 13, 77, "Input",ExpressionUUID->"16b6364c-b326-4597-b2ec-47c3a75116bf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7364, 208, 216, 4, 77, "Subsubsection",ExpressionUUID->"57ab82f8-33d1-43dd-a4d7-c87aa345d76d"],
+Cell[7583, 214, 561, 15, 77, "Input",ExpressionUUID->"15cacb62-8724-4ec2-bc8e-be901a6f2af8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8181, 234, 227, 4, 77, "Subsubsection",ExpressionUUID->"f4eba9ec-b3c3-44c0-968c-7049d1fe1c6f"],
+Cell[8411, 240, 515, 17, 77, "Input",ExpressionUUID->"4f2b4656-5468-4a8a-9e5c-78cedb604dba"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8963, 262, 279, 5, 77, "Subsubsection",ExpressionUUID->"0689d0f2-99ba-4e73-af1a-070e22531f4b"],
+Cell[9245, 269, 510, 17, 77, "Input",ExpressionUUID->"d8e7e046-56a1-42a8-9c97-586bd153b77c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9792, 291, 245, 4, 77, "Subsubsection",ExpressionUUID->"8617b837-e490-4fff-b895-04b13aa91817"],
+Cell[10040, 297, 423, 11, 77, "Input",ExpressionUUID->"6f9bbffe-31f6-4af0-ab33-8528b8a86c19"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10500, 313, 274, 5, 77, "Subsubsection",ExpressionUUID->"5fe0e920-7c80-4439-bfb0-1c697d37c542"],
+Cell[10777, 320, 570, 17, 77, "Input",ExpressionUUID->"496b7863-87c9-4b58-b8c6-8633c16ab5b8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11384, 342, 324, 5, 77, "Subsubsection",ExpressionUUID->"f3fd1a5e-4bfa-42b9-a805-984d6063c0b5"],
+Cell[11711, 349, 438, 14, 77, "Input",ExpressionUUID->"87bf6a37-ca18-47cc-ad54-d276046fa3b3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
